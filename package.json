@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run lint"
-    }
-  },
   "scripts": {
     "dev": "npx nodemon",
     "build": "rimraf ./build && npx tsc",
     "start": "yarn run build && node build/index.js",
-    "lint": "eslint . "
+    "lint": "eslint . ",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^9.7.0",
